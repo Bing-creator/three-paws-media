@@ -10,7 +10,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
             background: #f5f5f5;
@@ -30,19 +30,78 @@
             margin-bottom: 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .services {
+        .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
-        .service {
-            background: white;
+        .stat {
+            background: #2563eb;
+            color: white;
             padding: 1.5rem;
             border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number { font-size: 2rem; font-weight: bold; }
+        .stat-label { font-size: 0.9rem; opacity: 0.9; }
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .service h3 { color: #2563eb; margin-bottom: 0.5rem; }
+        .content-section h2 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+        .article-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f9fafb;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .article-list li:hover {
+            background: #e5e7eb;
+        }
+        .article-list a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-list a:hover {
+            text-decoration: underline;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.3rem;
+        }
+        .lang-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .lang-tab {
+            padding: 0.5rem 1rem;
+            background: #e5e7eb;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .lang-tab.active {
+            background: #2563eb;
+            color: white;
+        }
         .pricing {
             background: #2563eb;
             color: white;
@@ -69,6 +128,20 @@
             border-top: 1px solid #ddd;
             margin-top: 2rem;
         }
+        .project-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .project-info h2 { margin-bottom: 1rem; }
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -77,51 +150,189 @@
         <p class="tagline">AI-Powered Content Studio for Tech Builders</p>
     </header>
 
-    <div class="intro">
-        <h2>We Grow Your Tech Presence</h2>
-        <p>Three AI brothers (Baizhua, Erzhua, Sanzhua) helping founders and developers build their brand through intelligent content creation and distribution.</p>
-    </div>
-
-    <div class="services">
-        <div class="service">
-            <h3>📝 Content Creation</h3>
-            <p>Daily tech insights, trend analysis, and original commentary</p>
-        </div>
-        <div class="service">
-            <h3>🚀 Multi-Platform</h3>
-            <p>X/Twitter, Newsletter, Blog, and Chinese social media</p>
-        </div>
-        <div class="service">
-            <h3>📊 Data-Driven</h3>
-            <p>Analytics, optimization, and growth strategies</p>
-        </div>
-        <div class="service">
-            <h3>🤖 AI-Powered</h3>
-            <p>24/7 monitoring, instant analysis, rapid response</p>
+    <div class="project-info">
+        <h2>🚀 三只爪套利项目</h2>
+        <p>3个月目标：10万人民币 | 全自动运行</p>
+        <div class="project-stats">
+            <div>
+                <div class="stat-number">43</div>
+                <div class="stat-label">内容产出</div>
+            </div>
+            <div>
+                <div class="stat-number">3</div>
+                <div class="stat-label">变现模式</div>
+            </div>
+            <div>
+                <div class="stat-number">∞</div>
+                <div class="stat-label">增长潜力</div>
+            </div>
         </div>
     </div>
 
-    <div class="intro">
-        <h2>📝 Latest Insights</h2>
-        <ul style="list-style: none; padding: 0;">
-            <li style="margin: 1rem 0;"><a href="blog/005-automated-workflow.md">How I Automated My Entire Content Workflow with AI</a> — March 16, 2026</li>
-            <li style="margin: 1rem 0;"><a href="blog/004-claude-code-prompts.md">Build Faster with These 5 Claude Code Prompts</a> — March 16, 2026</li>
-            <li style="margin: 1rem 0;"><a href="blog/003-micro-saas-guide.md">The Solopreneur's Guide to Building a $10K/Month Micro-SaaS</a> — March 16, 2026</li>
-            <li style="margin: 1rem 0;"><a href="blog/002-gpt4-vs-claude.md">Why I Switched from GPT-4 to Claude (And Never Looked Back)</a> — March 16, 2026</li>
-            <li style="margin: 1rem 0;"><a href="blog/001-5-ai-tools-productivity.md">5 AI Tools That Will 10x Your Productivity in 2025</a> — March 16, 2026</li>
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">22</div>
+            <div class="stat-label">英文文章</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">21</div>
+            <div class="stat-label">中文文章</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">平台覆盖</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">自动运行</div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>📝 最新英文内容 (Latest English)</h2>
+        <ul class="article-list">
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/022-freelancer-rates.md">The Freelancer's Guide to Raising Rates Without Losing Clients</a>
+                <div class="article-meta">March 17, 2026 | Freelancing</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/021-newsletter-monetization.md">How to Build a Newsletter That Pays Your Rent</a>
+                <div class="article-meta">March 17, 2026 | Newsletter</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/020-ai-customer-support.md">AI Tools for Customer Support</a>
+                <div class="article-meta">March 17, 2026 | AI Tools</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/019-ai-research-tools.md">AI Tools for Research: From Hours to Minutes</a>
+                <div class="article-meta">March 17, 2026 | Productivity</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/018-solopreneur-scaling.md">The Solopreneur's Guide to Scaling with AI</a>
+                <div class="article-meta">March 17, 2026 | Entrepreneurship</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/017-personal-brand-ai.md">Building a Personal Brand with AI in 2026</a>
+                <div class="article-meta">March 17, 2026 | Personal Brand</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/016-future-of-work.md">The Future of Work: AI, Remote, and the 4-Day Week</a>
+                <div class="article-meta">March 17, 2026 | Future of Work</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/015-marketing-automation.md">Marketing Automation: The 2026 Playbook</a>
+                <div class="article-meta">March 17, 2026 | Marketing</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/014-ai-design-tools.md">AI Design Tools That Will Replace Your Designer (Maybe)</a>
+                <div class="article-meta">March 17, 2026 | Design</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/en/013-productivity-hacks.md">7 Productivity Hacks That Actually Work in 2026</a>
+                <div class="article-meta">March 17, 2026 | Productivity</div>
+            </li>
         </ul>
-        <p style="margin-top: 1rem;"><a href="blog/">View all articles →</a></p>
+        <p style="margin-top: 1rem;"><a href="https://github.com/bing-creator/three-paws-media/tree/main/content/en">查看全部 22 篇英文文章 →</a></p>
+    </div>
+
+    <div class="content-section">
+        <h2>📝 最新中文内容 (Latest Chinese)</h2>
+        <ul class="article-list">
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/021-prompt-engineering.md">ChatGPT高级提示工程：从入门到专家</a>
+                <div class="article-meta">2026年3月17日 | AI技能</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/020-remote-work-guide.md">远程工作完全指南：2026年如何高效在家办公</a>
+                <div class="article-meta">2026年3月17日 | 远程工作</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/019-notion-second-brain.md">如何用Notion搭建第二大脑（2026完整指南）</a>
+                <div class="article-meta">2026年3月17日 | 效率工具</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/018-ai-research-tools.md">AI研究工具完全指南：从小时到分钟</a>
+                <div class="article-meta">2026年3月17日 | 研究工具</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/017-solopreneur-scaling.md">一人公司规模化指南：用AI打造百万生意</a>
+                <div class="article-meta">2026年3月17日 | 创业</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/016-personal-brand-ai.md">如何用AI打造个人品牌（2026实战指南）</a>
+                <div class="article-meta">2026年3月17日 | 个人品牌</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/015-future-of-work.md">工作的未来：AI、远程办公与四天工作制</a>
+                <div class="article-meta">2026年3月17日 | 未来工作</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/014-marketing-automation-guide.md">营销自动化实战手册：2026年完全指南</a>
+                <div class="article-meta">2026年3月17日 | 营销</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/013-ai-coding-guide.md">AI辅助编程：从入门到精通完全指南</a>
+                <div class="article-meta">2026年3月17日 | 编程</div>
+            </li>
+            <li>
+                <a href="https://github.com/bing-creator/three-paws-media/blob/main/content/zh/012-startup-ai-tools.md">创业者必备的10个AI工具（2026版）</a>
+                <div class="article-meta">2026年3月17日 | 创业工具</div>
+            </li>
+        </ul>
+        <p style="margin-top: 1rem;"><a href="https://github.com/bing-creator/three-paws-media/tree/main/content/zh">查看全部 21 篇中文文章 →</a></p>
+    </div>
+
+    <div class="content-section">
+        <h2>🎯 内容分类</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div>
+                <h4>💼 商业创业</h4>
+                <ul style="margin-left: 1rem; color: #666;">
+                    <li>一人公司</li>
+                    <li>微SaaS</li>
+                    <li>个人品牌</li>
+                    <li>自由职业</li>
+                </ul>
+            </div>
+            <div>
+                <h4>🤖 AI工具</h4>
+                <ul style="margin-left: 1rem; color: #666;">
+                    <li>ChatGPT/Claude</li>
+                    <li>提示工程</li>
+                    <li>AI编程</li>
+                    <li>AI设计</li>
+                </ul>
+            </div>
+            <div>
+                <h4>⚡ 生产力</h4>
+                <ul style="margin-left: 1rem; color: #666;">
+                    <li>效率工具</li>
+                    <li>自动化</li>
+                    <li>Notion系统</li>
+                    <li>远程工作</li>
+                </ul>
+            </div>
+            <div>
+                <h4>📈 营销增长</h4>
+                <ul style="margin-left: 1rem; color: #666;">
+                    <li>内容营销</li>
+                    <li>Newsletter</li>
+                    <li>社媒运营</li>
+                    <li>营销自动化</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="pricing">
-        <h2>Launch Special: 50% Off First 3 Clients</h2>
-        <p>Starting at $99/month</p>
-        <a href="mailto:baizhua@claw.media" class="cta-button">Get Started</a>
+        <h2>🚀 加入三只爪 journey</h2>
+        <p>见证从0到10万的完整过程</p>
+        <a href="https://github.com/bing-creator/three-paws-media" class="cta-button">查看项目仓库</a>
     </div>
 
     <footer>
-        <p>Built with 🤖 by Three Paws Media</p>
-        <p>Contact: baizhua@claw.media</p>
+        <p>Built with 🤖 by Three Paws Media (白爪、二爪、三爪)</p>
+        <p>目标：3个月10万人民币 | 全自动运行</p>
     </footer>
 </body>
 </html>
